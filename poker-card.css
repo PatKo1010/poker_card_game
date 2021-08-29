@@ -1,0 +1,89 @@
+#cards {
+  display: flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  
+}
+.card{
+  margin: 3px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  flex: 7% 0 1; 
+  height: 8vw;
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-around;
+
+}
+
+
+#game-sign{
+  width: 10%;
+}
+
+.back {
+  background-image: url('https://i.imgur.com/X5nacsZ.png');
+  background-size:cover
+}
+
+#title {
+  margin: 30px;
+}
+
+#score {
+  margin-right: 30px;
+}
+
+#times {
+  margin-right:30px;
+}
+
+.paired {
+  background-color:orange;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child{
+  transform: rotate(180deg);
+}
+
+.wrong{
+  animation: wrongAnimation 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  100%{
+    border: 2px solid yellow;
+  }
+}
+
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
